@@ -6,5 +6,5 @@ O projeto acadêmico é um sistema distribuído que realiza a visualização e a
 Desenvolvido com: 
 
 WEB -> HTML - CSS - JAVASCRIPT
-DESKTOP - JAVA
-BACKEND - C#
+DESKTOP -> JAVA
+BACKEND -> C#
