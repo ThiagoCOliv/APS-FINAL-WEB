@@ -196,12 +196,10 @@
                   <EmptySpace pref="33" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="txfUsoSatisfacaoPublico" pref="90" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txfBiodiversidadeSustentabilidade" pref="90" max="32767" attributes="0"/>
-                          <Component id="txfAcessibilidade" max="32767" attributes="0"/>
-                          <Component id="txfEstadoConservacaoManutencao" max="32767" attributes="0"/>
-                          <Component id="txfQtdDistribuicaoAreasVerdes" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="txfBiodiversidadeSustentabilidade" pref="90" max="32767" attributes="0"/>
+                      <Component id="txfAcessibilidade" max="32767" attributes="0"/>
+                      <Component id="txfEstadoConservacaoManutencao" max="32767" attributes="0"/>
+                      <Component id="txfQtdDistribuicaoAreasVerdes" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               </Group>

@@ -4,6 +4,8 @@
  */
 package apresentação;
 
+import modelo.Controle;
+
 /**
  *
  * @author thiag
@@ -17,6 +19,8 @@ public class FrmCidade extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
+    
+    Controle controle = new Controle();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -285,6 +289,8 @@ public class FrmCidade extends javax.swing.JDialog {
         zerarBotoes();
         btnNoroeste.setEnabled(false);
         btnEditar.setEnabled(true);
+        
+        controle.getRegiao("0");
     }//GEN-LAST:event_btnNoroesteActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed

@@ -6,50 +6,24 @@ namespace APIAPSFinal.Controllers
     [Route("[controller]")]
     public class CidadeController : ControllerBase
     {
-        private static readonly string[] Regioes = new[]
+        private static readonly Regiao[] Regioes = new[]
         {
-            "Noroeste", "Norte", "Nodeste", "Oeste", "Centro", "Leste", "Sudoeste", "Sul", "Sudeste", "Cidade Inteira"
-        };
-
-        private static int[] qtdDistribuicaoAreasVerdesPorRegiao = new[]
-        {
-            45, 30, 22, 56, 78, 45, 23, 11, 64, 0
-        };
-
-        private static int[] estadoConservacaoManutencaoPorRegiao = new[]
-        {
-            45, 30, 22, 56, 78, 45, 23, 11, 64, 0
-        };
-
-        private static int[] acessibilidadePorRegiao = new[]
-        {
-            45, 30, 22, 56, 78, 45, 23, 11, 64, 0
-        };
-
-        private static int[] biodiversidadeSustentabilidadePorRegiao = new[]
-        {
-            45, 30, 22, 56, 78, 45, 23, 11, 64, 0
-        };
-
-        private static int[] usoSatisfacaoPublicoPorRegiao = new[]
-        {
-            45, 30, 22, 56, 78, 45, 23, 11, 64, 0
+            new Regiao("Noroeste", 45, 50, 70, 65, 55),
+            new Regiao("Norte", 45, 50, 70, 65, 55),
+            new Regiao("Nordeste", 45, 50, 70, 65, 55), 
+            new Regiao("Oeste", 45, 50, 70, 65, 55), 
+            new Regiao("Centro", 45, 50, 70, 65, 55), 
+            new Regiao("Leste", 45, 50, 70, 65, 55), 
+            new Regiao("Sudoeste", 45, 50, 70, 65, 55), 
+            new Regiao("Sul", 45, 50, 70, 65, 55), 
+            new Regiao("Sudeste", 45, 50, 70, 65, 55), 
+            new Regiao("Cidade Inteira", 45, 50, 70, 65, 55)
         };
 
         [HttpGet]
         public JsonResult Get(int regiao)
         {
-            var data = new Regiao
-            {
-                regiaoCidade = Regioes[regiao],
-                qtdDistribuicaoAreasVerdes = qtdDistribuicaoAreasVerdesPorRegiao[regiao],
-                estadoConservacaoManutencao = estadoConservacaoManutencaoPorRegiao[regiao],
-                acessibilidade = acessibilidadePorRegiao[regiao],
-                biodiversidadeSustentabilidade = biodiversidadeSustentabilidadePorRegiao[regiao],
-                usoSatisfacaoPublico = usoSatisfacaoPublicoPorRegiao[regiao]
-            };
-
-            return new JsonResult(data);
+            return new JsonResult(Regioes[regiao]);
         }
     }
 }
