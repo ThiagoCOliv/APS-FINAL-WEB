@@ -4,6 +4,7 @@ const infos = document.querySelector('.infos');
 const infosTitulo = infos.querySelector('h3');
 const dados = document.querySelectorAll('#dados h4');
 const avaliacaoDados = document.querySelectorAll('.avaliacao h4');
+const avaliacaoGeral = document.querySelector('.avaliacao.geral h4');
 
 let existeRegiaoAtivada = false;
 let regiaoAtivada;
@@ -20,7 +21,7 @@ regioes.forEach((regiao) => {
             existeRegiaoAtivada = true;
             regiaoAtivada = regiao;
             infosTitulo.innerHTML = `INFORMAÇÕES - ${definirRegiao(regiao)}`;
-            console.log(await buscarDados(indice));
+            tratarDados(await buscarDados(indice));
         }else if(regiao == regiaoAtivada){
             existeRegiaoAtivada = false;
             regiaoAtivada = null;
@@ -30,7 +31,7 @@ regioes.forEach((regiao) => {
             regiaoAtivada.classList.toggle("active");
             regiaoAtivada = regiao;
             infosTitulo.innerHTML = `INFORMAÇÕES - ${definirRegiao(regiao)}`;
-            console.log(await buscarDados(indice));
+            tratarDados(await buscarDados(indice));
         }
 
         regiao.classList.toggle("active");
@@ -65,13 +66,19 @@ function definirIndice(regiao){
 }
 
 function zerarDados(){
-    for (dado in dados) {
-        dado.innerHTML = '-';
-    }
+    dados[0].innerHTML = "-";
+    dados[1].innerHTML = "-";
+    dados[2].innerHTML = "-";
+    dados[3].innerHTML = "-";
+    dados[4].innerHTML = "-";
 
-    for (dado in avaliacaoDados) {
-        dado.innerHTML = '-';
-    }
+    avaliacaoDados[0].innerHTML = "-";
+    avaliacaoDados[1].innerHTML = "-";
+    avaliacaoDados[2].innerHTML = "-";
+    avaliacaoDados[3].innerHTML = "-";
+    avaliacaoDados[4].innerHTML = "-";
+
+    avaliacaoGeral.innerHTML = "-";
 }
 
 async function buscarDados(indice){
@@ -94,4 +101,20 @@ async function buscarDados(indice){
     } catch (error) {
         console.error('Ocorreu um erro:', error);
     }
+}
+
+function tratarDados(jsonDados){
+    dados[0].innerHTML = `${jsonDados.qtdDistribuicaoAreasVerdes}%`;
+    dados[1].innerHTML = `${jsonDados.estadoConservacaoManutencao}%`;
+    dados[2].innerHTML = `${jsonDados.acessibilidade}%`;
+    dados[3].innerHTML = `${jsonDados.biodiversidadeSustentabilidade}%`;
+    dados[4].innerHTML = `${jsonDados.usoSatisfacaoPublico}%`;
+
+    avaliacaoDados[0].innerHTML = jsonDados.qtdDistribuicaoAreasVerdesAvaliacao;
+    avaliacaoDados[1].innerHTML = jsonDados.estadoConservacaoManutencaoAvaliacao;
+    avaliacaoDados[2].innerHTML = jsonDados.acessibilidadeAvaliacao;
+    avaliacaoDados[3].innerHTML = jsonDados.biodiversidadeSustentabilidadeAvaliacao;
+    avaliacaoDados[4].innerHTML = jsonDados.usoSatisfacaoPublicoAvaliacao;
+
+    avaliacaoGeral.innerHTML = jsonDados.avaliacaoGeral;
 }

@@ -4,7 +4,17 @@ ConfigureServices(builder.Services);
 
 var app = builder.Build();
 
-Configure(app, app.Environment);
+app.UseCors("MyAllowedOrigins");
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseAuthorization();
+app.MapControllers();
 
 app.Run();
 
@@ -17,28 +27,12 @@ static void ConfigureServices(IServiceCollection services)
     // Configurar a política CORS aqui
     services.AddCors(options =>
     {
-        options.AddDefaultPolicy(builder =>
+        options.AddPolicy("MyAllowedOrigins", builder =>
         {
             builder
-            .AllowAnyOrigin()
+            .WithOrigins("*")
             .AllowAnyHeader()
             .AllowAnyMethod();
         });
     });
-}
-
-static void Configure(WebApplication app, IWebHostEnvironment env)
-{
-    if (env.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-        app.UseSwagger();
-        app.UseSwaggerUI();
-    }
-
-    app.UseHttpsRedirection();
-    app.UseRouting();
-    app.UseCors();
-    app.UseAuthorization();
-    app.MapControllers();
 }
