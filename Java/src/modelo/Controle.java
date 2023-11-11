@@ -4,10 +4,30 @@ import serviceAPI.RegiaoAPI;
 
 public class Controle 
 {
-    public void getRegiao(String regiao)
+    public String mensagem = "";
+    
+    public Regiao getRegiao(String regiao)
     {
         RegiaoAPI api = new RegiaoAPI();
-        //Regiao regiaoClasse = api.getRegiao(regiao);
-        System.out.println(api.getRegiao(regiao));
+        Regiao regiaoClasse = api.getRegiao(regiao);
+        
+        if(!"".equals(api.mensagem))
+        {
+            this.mensagem = api.mensagem;
+            return null;
+        }
+        
+        return regiaoClasse;
+    }
+    
+    public void setRegiao(String id, Regiao regiao)
+    {
+        RegiaoAPI api = new RegiaoAPI();
+        api.setRegiao(id, regiao);
+        
+        if(!"".equals(api.mensagem))
+        {
+            this.mensagem = api.mensagem;
+        }
     }
 }

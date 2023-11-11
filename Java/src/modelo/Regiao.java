@@ -17,43 +17,43 @@ public class Regiao
         this.regiaoCidade = regiaoCidade;
     }
 
-    public int getQtdDistribuicaoAreasVerdes() {
-        return qtdDistribuicaoAreasVerdes;
+    public String getQtdDistribuicaoAreasVerdes() {
+        return Integer.toString(qtdDistribuicaoAreasVerdes);
     }
 
-    public void setQtdDistribuicaoAreasVerdes(int qtdDistribuicaoAreasVerdes) {
-        this.qtdDistribuicaoAreasVerdes = qtdDistribuicaoAreasVerdes;
+    public void setQtdDistribuicaoAreasVerdes(String qtdDistribuicaoAreasVerdes) {
+        this.qtdDistribuicaoAreasVerdes = Integer.parseInt(qtdDistribuicaoAreasVerdes);
     }
 
-    public int getEstadoConservacaoManutencao() {
-        return estadoConservacaoManutencao;
+    public String getEstadoConservacaoManutencao() {
+        return Integer.toString(estadoConservacaoManutencao);
     }
 
-    public void setEstadoConservacaoManutencao(int estadoConservacaoManutencao) {
-        this.estadoConservacaoManutencao = estadoConservacaoManutencao;
+    public void setEstadoConservacaoManutencao(String estadoConservacaoManutencao) {
+        this.estadoConservacaoManutencao = Integer.parseInt(estadoConservacaoManutencao);
     }
 
-    public int getAcessibilidade() {
-        return acessibilidade;
+    public String getAcessibilidade() {
+        return Integer.toString(acessibilidade);
     }
 
-    public void setAcessibilidade(int acessibilidade) {
-        this.acessibilidade = acessibilidade;
+    public void setAcessibilidade(String acessibilidade) {
+        this.acessibilidade = Integer.parseInt(acessibilidade);
     }
 
-    public int getBiodiversidadeSustentabilidade() {
-        return biodiversidadeSustentabilidade;
+    public String getBiodiversidadeSustentabilidade() {
+        return Integer.toString(biodiversidadeSustentabilidade);
     }
 
-    public void setBiodiversidadeSustentabilidade(int biodiversidadeSustentabilidade) {
-        this.biodiversidadeSustentabilidade = biodiversidadeSustentabilidade;
+    public void setBiodiversidadeSustentabilidade(String biodiversidadeSustentabilidade) {
+        this.biodiversidadeSustentabilidade = Integer.parseInt(biodiversidadeSustentabilidade);
     }
 
-    public int getUsoSatisfacaoPublico() {
-        return usoSatisfacaoPublico;
+    public String getUsoSatisfacaoPublico() {
+        return Integer.toString(usoSatisfacaoPublico);
     }
 
-    public void setUsoSatisfacaoPublico(int usoSatisfacaoPublico) {
-        this.usoSatisfacaoPublico = usoSatisfacaoPublico;
+    public void setUsoSatisfacaoPublico(String usoSatisfacaoPublico) {
+        this.usoSatisfacaoPublico = Integer.parseInt(usoSatisfacaoPublico);
     }
 }
