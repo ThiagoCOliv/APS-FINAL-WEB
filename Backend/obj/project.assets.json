@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Projects\\APIAPSFinal\\APIAPSFinal.csproj",
+      "projectUniqueName": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Github\\APS-FINAL\\Backend\\APIAPSFinal.csproj",
       "projectName": "APIAPSFinal",
-      "projectPath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Projects\\APIAPSFinal\\APIAPSFinal.csproj",
+      "projectPath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Github\\APS-FINAL\\Backend\\APIAPSFinal.csproj",
       "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Projects\\APIAPSFinal\\obj\\",
+      "outputPath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Github\\APS-FINAL\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",

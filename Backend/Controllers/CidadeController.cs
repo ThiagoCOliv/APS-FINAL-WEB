@@ -26,8 +26,8 @@ namespace APIAPSFinal.Controllers
             return new JsonResult(Regioes[regiao]);
         }
 
-        [HttpPost]
-        public String Post(String id, int acessibilidade, int qtdDistribuicaoAreasVerdes, int estadoConservacaoManutencao, int biodiversidadeSustentabilidade, int usoSatisfacaoPublico)
+        [HttpPut]
+        public string Put(string id, int acessibilidade, int qtdDistribuicaoAreasVerdes, int estadoConservacaoManutencao, int biodiversidadeSustentabilidade, int usoSatisfacaoPublico)
         {
             Validacao validador = new Validacao();
             if (!validador.validarId(id)) 

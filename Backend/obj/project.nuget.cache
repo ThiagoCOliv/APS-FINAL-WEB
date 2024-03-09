@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uX5kJyw7B9JLIlpf1Z6v4QE61GVRqOiOosDyJKb4It0cngaupO8vSoGHt1olVBl/lilfDY3hjEGGTlPLToSBZw==",
+  "dgSpecHash": "SKUdJujgiN5gvB+BSaPMzwfBbx8bMH+BJVqxRWdEyrFHurkaJJ4XHqPglo/7dW4QTV5kMKi48hcLrs2t3dFlNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Projects\\APIAPSFinal\\APIAPSFinal.csproj",
+  "projectFilePath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Github\\APS-FINAL\\Backend\\APIAPSFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.12\\microsoft.aspnetcore.openapi.7.0.12.nupkg.sha512",
     "C:\\Users\\thiag\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

@@ -23,7 +23,7 @@ public class Controle
     public void setRegiao(String id, Regiao regiao)
     {
         RegiaoAPI api = new RegiaoAPI();
-        api.setRegiao(id, regiao);
+        api.updateRegiao(id, regiao);
         
         if(!"".equals(api.mensagem))
         {

@@ -49,7 +49,7 @@ public class RegiaoAPI
         //return jsonEmString;
     }
     
-    public void setRegiao(String regiaoNumero, Regiao regiao)
+    public void updateRegiao(String regiaoNumero, Regiao regiao)
     {
         String regiaoAPIURL = "https://localhost:7101/Cidade?id=" + regiaoNumero + "&acessibilidade=" + regiao.getAcessibilidade() + 
                 "&qtdDistribuicaoAreasVerdes=" + regiao.getQtdDistribuicaoAreasVerdes() + "&estadoConservacaoManutencao=" + 
@@ -63,7 +63,7 @@ public class RegiaoAPI
         {
             URL url = new URL(regiaoAPIURL);
             HttpsURLConnection conexao = (HttpsURLConnection) url.openConnection();
-            conexao.setRequestMethod("POST");
+            conexao.setRequestMethod("PUT");
             conexao.setRequestProperty("Content-Type", "application/json");
             
             if(conexao.getResponseCode() != 200){
